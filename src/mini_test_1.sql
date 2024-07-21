@@ -139,7 +139,8 @@ SELECT Course.name, AVG(point) AS 'Diem TB'
 FROM Point
          JOIN Course ON Point.course_id = Course.id
 GROUP BY Course.name
-ORDER BY AVG(point) DESC
+ORDER BY AVG(point)
+DESC
     LIMIT 1;
 
 #OR
@@ -154,30 +155,30 @@ ORDER BY AVG(point) DESC
 
 #JOIN
 # SELECT Point.id, Course.name, Students.fullname, Point.point
-    # FROM Point
-               # JOIN Course ON Point.course_id = Course.id
-      # JOIN Students ON Point.student_id = Students.id;
+# FROM Point
+# JOIN Course ON Point.course_id = Course.id
+# JOIN Students ON Point.student_id = Students.id;
 
 # INNER JOIN
-    # SELECT Students.id, Students.fullname, Course.name
+# SELECT Students.id, Students.fullname, Course.name
 # FROM Students
 # INNER JOIN Course ON Students.id = Course.id;
 
 #LEFT JOIN & AS
 # SELECT Students.id, Students.fullname, Course.name AS 'khoa hoc'
 # FROM Course
-                                                                # LEFT JOIN Students ON Students.id = Course.id;
+# LEFT JOIN Students ON Students.id = Course.id;
 
 #ORDER BY
 # SELECT Students.fullname
-                    # FROM Students
-                               # ORDER BY age DESC;
+# FROM Students
+# ORDER BY age DESC;
 
 #GROUP BY & HAVING
 # SELECT address_id, SUM(age) AS 'so tuoi'
 # FROM Students
-                                                # GROUP BY address_id
-             # HAVING SUM(age) > 42;
+# GROUP BY address_id
+# HAVING SUM(age) > 42;
 
 
 
