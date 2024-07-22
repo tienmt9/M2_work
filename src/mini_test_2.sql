@@ -130,4 +130,23 @@ FROM Tours
 WHERE YEAR(end_date) = 2025
   AND MONTH(end_date) = 4;
 
+use mini_test_2;
+
+EXPLAIN
+SELECT *
+FROM Tours
+Where tour_code = 'TOUR001';
+
+EXPLAIN
+SELECT *
+FROM Tours
+Where id = 1;
+
+alter table tours add index idx(id);
+
+create unique index  idx_tour_code on Tours(tour_code);
+
+create unique index  idx_id on Tours(id);
+
+
 

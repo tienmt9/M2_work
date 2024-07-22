@@ -292,10 +292,6 @@ BEGIN
     SELECT tong_so_luong_cuoi AS TongSoLuongCuoi;
 END //
 
-DELIMITER ;
-
-DELIMITER //
-
 CREATE PROCEDURE SP_TongTienXuatVatTu(IN ma_vat_tu VARCHAR(50))
 BEGIN
     DECLARE tong_tien_xuat DECIMAL(10, 2);
@@ -308,10 +304,6 @@ BEGIN
 
     SELECT tong_tien_xuat AS TongTienXuat;
 END //
-
-DELIMITER ;
-
-DELIMITER //
 
 CREATE PROCEDURE SP_TongSoLuongDat(IN so_don_hang VARCHAR(50))
 BEGIN
@@ -326,10 +318,6 @@ BEGIN
     SELECT tong_so_luong_dat AS TongSoLuongDat;
 END //
 
-DELIMITER ;
-
-DELIMITER //
-
 CREATE PROCEDURE SP_ThemDonDatHang(
     IN ma_don VARCHAR(50),
     IN ngay_dat_hang DATE,
@@ -340,10 +328,6 @@ BEGIN
     VALUES (ma_don, ngay_dat_hang, nha_cung_cap_id);
 END //
 
-DELIMITER ;
-
-DELIMITER //
-
 CREATE PROCEDURE SP_ThemChiTietDonHang(
     IN don_hang_id INT,
     IN vat_tu_id INT,
@@ -353,10 +337,6 @@ BEGIN
     INSERT INTO CT_DonHang (don_hang_id, vat_tu_id, so_luong_dat)
     VALUES (don_hang_id, vat_tu_id, so_luong_dat);
 END //
-
-DELIMITER ;
-
-DELIMITER //
 
 CREATE PROCEDURE SP_XoaNhaCungCap(IN nha_cung_cap_id INT)
 BEGIN
